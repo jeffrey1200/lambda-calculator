@@ -1,9 +1,12 @@
 import React from "react";
 
 const NumberButton = props => {
+
+  let holder = props.test
+
   return ( 
     <div>
-      <button>{props.oneToZero}</button>
+      <button onClick = {()=> {holder(props.oneToZero)}}>{props.oneToZero}</button>
     </div>
 
   );
