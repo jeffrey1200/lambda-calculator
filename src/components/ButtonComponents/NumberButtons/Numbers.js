@@ -4,18 +4,23 @@ import NumberButton from "../NumberButtons/NumberButton";
 
 //import any components needed
 // example of import from data.js. Note all the ../   This is how we move through folders.
+
 /* 
 import { numbers } from '../../../data' 
 */
+
 //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = props => {
   // STEP 2 - add the imported data to state
-  const [nums, setNumbers] = useState(numbers);
+  let test = props.setNumbers
+
+  
   return (
     <div>
-      {nums.map(item => (
-        <NumberButton oneToZero={item} />
+      
+      {numbers.map(item => (
+        <NumberButton numeros = {props.numeros} test = {test} oneToZero={item} />
       ))}
     </div>
   );

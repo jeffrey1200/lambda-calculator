@@ -11,8 +11,9 @@ const Specials = () => {
 
   return (
     <div>
+      
       {specialChars.map(item=>
-        <SpecialButton specialSigns = {item} />
+        <SpecialButton specialSigns = {item}  />
         )}
     </div>
   );

@@ -13,14 +13,21 @@ function App() {
 //  const [operadores,setOperadores] = useState(operators)
 
 //  const [specialChars,setSpecialChars] = useState(specials)
+  const [displayValue,setDisplayValue] = useState(0)
+  // console.log(Numbers().props.children.forEach(item =>console.log(item.key)))
+  // let holder = Numbers().props.children
+  // let holder2 = holder.forEach(item =>item)
+  // console.log(holder)
+  const [nums, setNumbers] = useState(0);
 
   return (
     <div className="container">
       <Logo />
-      <Display />
+      
+      <Display see = {nums}/>
       <div className="App">
         <Specials />
-        <Numbers />
+        <Numbers numeros = {nums} setNumbers = {setNumbers}/>
         <Operators />
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
